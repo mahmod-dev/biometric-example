@@ -88,13 +88,13 @@ class BiometricActivity : AppCompatActivity() {
 
     private fun createPromptInfo(): BiometricPrompt.PromptInfo {
         return BiometricPrompt.PromptInfo.Builder()
-            .setTitle("set title")
-            .setSubtitle("set subtitle")
-            .setDescription("set description")
+            .setTitle("set title") //Required
+            .setSubtitle("set subtitle") //Optional
+            .setDescription("set description") //Optional
             // Authenticate without requiring the user to press a "confirm"
             // button after satisfying the biometric check
-            .setConfirmationRequired(true)
-            .setNegativeButtonText("navigate button")
+            .setConfirmationRequired(false) //optional
+            .setNegativeButtonText("navigate button") //Required
             .build()
     }
 
